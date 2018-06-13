@@ -40,13 +40,12 @@ public class UsersDataSet implements Serializable { // Serializable Important to
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public long getId() {
         return id;
     }
+
+    @SuppressWarnings("UnusedDeclaration")
+    public String getPass() { return pass;}
 
     public void setId(long id) {
         this.id = id;
@@ -56,8 +55,9 @@ public class UsersDataSet implements Serializable { // Serializable Important to
         this.pass = pass;
     }
 
-    public String getPass() { return pass;}
-
+    public void setName(String name) {
+        this.name = name;
+    }
 
     @Override
     public String toString() {

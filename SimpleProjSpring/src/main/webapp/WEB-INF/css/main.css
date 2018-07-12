@@ -1,0 +1,53 @@
+h1{
+    color: #626cd1;
+    font-size: 20px;
+    font-family: Arial;
+}
+.error-message {
+    font-family: Arial;
+    color: #990036;
+    font-size: small;
+}
+.error-message:first-letter {
+    text-transform: capitalize;
+}
+.button {
+    display: block;
+    width: 35px;
+    height: 15px;
+    background: #737bd1;
+    /*background: #979ee8;*/
+    padding: 3px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+input[type=submit] {
+    font-family: Arial;
+    font-weight: bold;
+    padding: 3px;
+    background: #979ee8;
+    border:0 none;
+    color: white;
+    width: 50px;
+    height: 25px;
+    cursor:pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+input[type=reset] {
+    font-family: Arial;
+    font-weight: bold;
+    padding: 3px;
+    /*background: #626cd1;*/
+    background: #979ee8;
+    border:0 none;
+    color: white;
+    width: 50px;
+    height: 25px;
+    cursor:pointer;
+    border-radius: 5px;
+    text-align: center;
+}

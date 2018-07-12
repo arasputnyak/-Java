@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+</head>
+<body>
+<h1>Please, fill the form: </h1>
+<form action="#" th:action="@{/add}" th:object="${myUser}" method="post">
+    <table>
+        <tr>
+            <td style="font-family: Arial; font-size: 11pt">Name: </td>
+            <td><input type="text" th:field="*{name}" /></td>
+            <td class="error-message" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name error message</td>
+        </tr>
+        <tr>
+            <td style="font-family: Arial; font-size: 11pt">Age: </td>
+            <td><input type="text" th:field="*{age}" /></td>
+            <td class="error-message" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age error message</td>
+        </tr>
+        <tr>
+            <td style="font-family: Arial; font-size: 11pt">Hometown: </td>
+            <td><input type="text" th:field="*{homeTown}" /></td>
+            <td class="error-message" th:if="${#fields.hasErrors('homeTown')}" th:errors="*{homeTown}">Hometown error message</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"/></td>
+            <td><input type="reset" value="Reset"/></td>
+        </tr>
+    </table>
+    <!--<p>Name: <input type="text" th:field="*{name}"  th:if="${#fields.hasErrors('name')}"/></p>
+    <br>
+    <p>Age: <input type="number" th:field="*{age}" /></p>
+    <br>
+    <p>Hometown: <input type="text" th:field="*{homeTown}" /></p>
+    <br>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>-->
+</form>
+<!--<br>
+<div th:if="${errorMessage}" th:utext="${errorMessage}" style="color: red;font-style: italic;">
+</div>-->
+</body>
+</html>

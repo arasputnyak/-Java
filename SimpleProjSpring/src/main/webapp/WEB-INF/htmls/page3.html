@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Get Info Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+</head>
+<body>
+<h1>Please, enter the name: </h1>
+<form action="#" th:action="@{/info}" th:object="${nameForm}" method="post">
+    <table>
+        <tr>
+            <td style="font-family: Arial; font-size: 11pt">Name: </td>
+            <td><input type="text" th:field="*{value}" id="value"/></td>
+            <td class="error-message" th:if="${#fields.hasErrors('value')}" th:errors="*{value}">Name.value error message</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit" /></td>
+            <td><input type="reset" value="Reset" /></td>
+        </tr>
+    </table>
+    <!--<p>Name: <input type="text" th:field="*{name}"  th:if="${#fields.hasErrors('name')}"/></p>
+    <br>
+    <p>Age: <input type="number" th:field="*{age}" /></p>
+    <br>
+    <p>Hometown: <input type="text" th:field="*{homeTown}" /></p>
+    <br>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>-->
+</form>
+<!--<input type="text" id="name" th:placeholder="Name">
+<input type="button" value="info" onclick="getName();">
+<script>
+        function getName() {
+            var name = document.getElementById("name").value;
+            window.location.href = "http://localhost:8080/info?name=" + name;
+    }
+</script>-->
+
+</body>
+</html>
